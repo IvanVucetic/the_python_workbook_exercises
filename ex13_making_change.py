@@ -11,10 +11,11 @@
 # Exercise 13: Making Change
 
 print "What is the change to be given back (e.g. $1.25, $3.47...)"
+# user was supposed to input CENTS, but I've missed that...
 change = float(raw_input("> "))
 
 toonies = int(change // 2)
-change -= toonies * 2
+change -= toonies * 2 # could've change = change % 2
 
 loonies = int(change // 1)
 change -= loonies
