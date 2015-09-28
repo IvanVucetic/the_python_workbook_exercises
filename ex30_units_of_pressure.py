@@ -10,4 +10,11 @@
 
 # Exercise 30: Units of Pressure
 
-# a line for testing out some git settings
+print "Enter pressure in kilopascals:"
+kpa = float(raw_input("> "))
+
+psi = kpa / 6.89475729
+mmhg = kpa * 760 / 101.325
+atm = kpa / 101.325
+
+print "The pressure is %.2f psi, %.2f mmHg, or %.2f atm." % (psi, mmhg, atm)
