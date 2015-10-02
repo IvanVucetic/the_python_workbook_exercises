@@ -2,7 +2,7 @@
 # Ben Stephenson - The Python Workbook
 #
 # Exercise no. 70
-# Date: 30.09.2015
+# Date: 01.10.2015
 #
 # Ivan Vucetic
 # vuceta87@yahoo.com
