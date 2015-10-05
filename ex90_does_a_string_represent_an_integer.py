@@ -39,3 +39,8 @@ if __name__ == '__main__':
     main()
 
 
+# could've been done a lot easier using .isdigit() method
+# "345".isdigit() ---> True
+# so, it would be:
+# if string.isdigit() or (string[0] in "+-" and string[1:].isdigit())
+# and that's it
