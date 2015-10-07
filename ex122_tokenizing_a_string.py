@@ -12,12 +12,10 @@
 
 def tokenize(text):
 	li = []
-
 	for char in text:
 		if char != ' ':
 			li.append(char)
 
-	print li
 	li_new = [] 
 
 	for i in range(len(li)):
@@ -29,7 +27,6 @@ def tokenize(text):
 				while li[n].isdigit():
 					n += 1
 				li_new.append(''.join(li[i:n])) 
-
 		elif li[i].isdigit():
 			# i != 0 necessary condition because if both first and last element
 			# are digits, it skips the first (because li[-1].isdigit()--> True)
@@ -54,17 +51,19 @@ def tokenize(text):
 				while li[n].isdigit():
 					n += 1
 				li_new.append(''.join(li[i:n]))
-		elif li[i] in "*/^()":
+		else:
 		 	li_new.append(li[i])
 
 	print li_new
 
 	
+def main():
+	s = raw_input("Insert mathematical expression: ")
+	tokenize(s)
 
-
-tokenize('+134 - (4 / 2)')
-
-tokenize('16 + 2')
+# call main() only if file hasn't been imported
+if __name__ == "__main__":
+	main()
 
 
 
