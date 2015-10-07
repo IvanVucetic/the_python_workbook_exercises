@@ -38,17 +38,9 @@ def tokenize(text):
 				if li[i-1].isdigit():
 					pass
 				# previous might be + or - that are part of a number	
-				elif li[i-1] in '+-':
-					if (i-1 == 0) or (not li[i-2].isdigit() and li[i-2] != ')'):
-						pass
-					else:
-						if i != len(li)-1:
-							n = i + 1
-							while li[n].isdigit():
-								n += 1
-							li_new.append(''.join(li[i:n]))
-						else:
-							li_new.append(li[i])						
+				elif (li[i-1] in '+-') and ((i-1 == 0) or \
+					(not li[i-2].isdigit() and li[i-2] != ')')):
+					pass
 				else:
 					if i != len(li)-1:
 						n = i + 1
