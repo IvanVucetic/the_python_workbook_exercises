@@ -31,13 +31,32 @@ def tokenize(text):
 				li_new.append(''.join(li[i:n])) 
 
 		elif li[i].isdigit():
-			# we want to skip if it's already a part of number
-			if li[i-1].isdigit():
-				pass
-			# previous might be + or - that are part of a number	
-			elif li[i-1] in '+-':
-				if (i-1 == 0) or (not li[i-2].isdigit() and li[i-2] != ')'):
+			# i != 0 necessary condition because if both first and last element
+			# are digits, it skips the first (because li[-1].isdigit()--> True)
+			if i != 0:
+				# we want to skip if it's already a part of number
+				if li[i-1].isdigit():
 					pass
+				# previous might be + or - that are part of a number	
+				elif li[i-1] in '+-':
+					if (i-1 == 0) or (not li[i-2].isdigit() and li[i-2] != ')'):
+						pass
+					else:
+						if i != len(li)-1:
+							n = i + 1
+							while li[n].isdigit():
+								n += 1
+							li_new.append(''.join(li[i:n]))
+						else:
+							li_new.append(li[i])						
+				else:
+					if i != len(li)-1:
+						n = i + 1
+						while li[n].isdigit():
+							n += 1
+						li_new.append(''.join(li[i:n]))
+					else:
+						li_new.append(li[i])
 			else:
 				n = i + 1
 				while li[n].isdigit():
@@ -53,7 +72,7 @@ def tokenize(text):
 
 tokenize('+134 - (4 / 2)')
 
-tokenize('13 + 2')
+tokenize('16 + 2')
 
 
 
