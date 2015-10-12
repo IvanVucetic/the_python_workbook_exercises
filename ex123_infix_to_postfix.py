@@ -38,6 +38,12 @@ def infix2postfix(infix):
 	return postfix
 
 
-li = ['(','1','+', '3',')', '+', '(','4', '+', '3',')']
-print infix2postfix(li)
+def main():
+	from ex122_tokenizing_a_string import tokenize
 
+	exp = raw_input("Insert an expression: ")
+	li = tokenize(exp)
+
+	print infix2postfix(li)
+
+main()
