@@ -33,7 +33,8 @@ def isSublist(larger,smaller):
 	return sub
 
 def main(large, small):
-	print isSublist(large,small)
+	if __name__ == '__main__':
+		print isSublist(large,small)
 
 
 a = [1,3,4,5,6]
