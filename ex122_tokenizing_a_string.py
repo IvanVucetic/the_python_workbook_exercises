@@ -54,12 +54,12 @@ def tokenize(text):
 		else:
 		 	li_new.append(li[i])
 
-	print li_new
+	return li_new
 
 	
 def main():
 	s = raw_input("Insert mathematical expression: ")
-	tokenize(s)
+	print tokenize(s)
 
 # call main() only if file hasn't been imported
 if __name__ == "__main__":
