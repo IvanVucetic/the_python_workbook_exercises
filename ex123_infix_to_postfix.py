@@ -46,4 +46,6 @@ def main():
 
 	print infix2postfix(li)
 
-main()
+
+if __name__ == "__main__":
+	main()
