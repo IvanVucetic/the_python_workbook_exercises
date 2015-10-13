@@ -21,3 +21,12 @@ for char in string:
 		unique.add(char)
 
 print "Number of unique characters:", len(unique)
+
+
+# using dictionary:
+# if char in dict.keys():
+# 	pass
+# else:
+# 	dict[char] = 1
+
+# print len(dict)
