@@ -27,3 +27,4 @@ except IOError:
 for i in range(10):
 	print txt.readline(), # without comma, for some reason it puts empty line between each line
 
+txt.close()
