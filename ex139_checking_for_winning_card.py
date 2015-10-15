@@ -51,22 +51,26 @@ def checkWinner(card):
 def main():
     from ex138_create_bingo_card import displayBingoCard
     
-    card1 = {'b':[1,1,1,1,0], 'i':[1,1,3,0,1], 'n':[1,1,0,1,1], 'g':[1,0,5,1,1], 'o':[0,9,9,9,1]}
+    card1 = {'b':[1,1,1,1,0], 'i':[1,1,3,0,1], 'n':[1,1,0,1,1], \
+             'g':[1,0,5,1,1], 'o':[0,9,9,9,1]}
     print "diagonal:"
     displayBingoCard(card1)
     print "Winner!" if checkWinner(card1) else "Loser!"
 
-    card2 = {'b':[1,1,1,1,0], 'i':[1,1,3,1,0], 'n':[1,1,1,1,0], 'g':[1,1,5,1,0], 'o':[1,9,9,9,0]}
+    card2 = {'b':[1,1,1,1,0], 'i':[1,1,3,1,0], 'n':[1,1,1,1,0], \
+             'g':[1,1,5,1,0], 'o':[1,9,9,9,0]}
     print "horizontal:"
     displayBingoCard(card2)
     print "Winner!" if checkWinner(card2) else "Loser!"
 
-    card3 = {'b':[1,1,1,1,0], 'i':[1,1,3,1,1], 'n':[0,0,0,0,0], 'g':[1,1,5,1,1], 'o':[1,9,9,9,1]}
+    card3 = {'b':[1,1,1,1,0], 'i':[1,1,3,1,1], 'n':[0,0,0,0,0], \
+             'g':[1,1,5,1,1], 'o':[1,9,9,9,1]}
     print "vertical:"
     displayBingoCard(card3)
     print "Winner!" if checkWinner(card3) else "Loser!"
 
-    card4 = {'b':[1,1,1,1,0], 'i':[1,0,3,1,1], 'n':[1,1,1,1,0], 'g':[1,0,5,1,1], 'o':[1,9,9,9,1]}
+    card4 = {'b':[1,1,1,1,0], 'i':[1,0,3,1,1], 'n':[1,1,1,1,0], \
+             'g':[1,0,5,1,1], 'o':[1,9,9,9,1]}
     print "not a winner:"
     displayBingoCard(card4)
     print "Winner!" if checkWinner(card4) else "Loser!"
