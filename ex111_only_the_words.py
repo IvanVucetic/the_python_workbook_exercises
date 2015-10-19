@@ -14,7 +14,7 @@ def split_2_words(string):
 	li = string.split()
 	li_s = []
 	for i in li:
-		li_s.append(i.strip("!.,:;?\'\"-"))
+		li_s.append(i.strip("!.,:;?\'\"-()"))
 	return li_s
 
 def main():
